@@ -20,7 +20,7 @@ body {
     padding: 16px;
 }
 
-.header {
+.heading {
     font-size: 32px;
     color: var(--secondary-color);
     margin: 60px 0px 30px 0px;
@@ -93,6 +93,7 @@ body {
 
 .card__text {
     width: 100%;
+    font-size: 22px;
     text-align: center;
     word-wrap: break-word; /* If someone enters a word too long for the card, break it. */
 }
