@@ -8,7 +8,7 @@ const displayItem = (value) => {
     card.classList.add('card');
     const cardText = document.createElement('span');
     cardText.classList.add('card__text');
-    cardText.innerHTML = value;
+    cardText.innerText = value;
     card.appendChild(cardText);
     resultContainer.appendChild(card);
 }
