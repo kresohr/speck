@@ -15,3 +15,10 @@ addBtn.addEventListener('click', () => {
         inputField.value = "";
     }
 })
+
+removeBtn.addEventListener('click', () => {
+    while (resultContainer.lastChild){
+        resultContainer.removeChild(resultContainer.lastChild);
+        console.log("brisanje test");
+    }
+})
