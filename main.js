@@ -29,13 +29,23 @@ const saveItemToLocalStorage = (value) => {
     localStorage.setItem(key,value)
 }
 
-addBtn.addEventListener('click', () => {
-    /* Ensure that user doesn't enter empty element OR space */
+const addItem = () => {
     if (inputField.value.trim()){
+        /* Ensure that user doesn't enter empty element OR space */
         displayItem(inputField.value);
         saveItemToLocalStorage(inputField.value);
         inputField.value = "";
     }
+}
+
+inputField.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter'){
+        addItem();
+    }
+})
+
+addBtn.addEventListener('click', () => {
+    addItem();
 })
 
 removeBtn.addEventListener('click', () => {
@@ -44,4 +54,6 @@ removeBtn.addEventListener('click', () => {
         localStorage.clear();
     }
 })
+
+
 
